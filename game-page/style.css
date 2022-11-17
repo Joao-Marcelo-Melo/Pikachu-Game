@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.board {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    border-bottom: solid 15px rgb(35, 155, 26);
+    background: linear-gradient(#87ceeb, #e8f6ff)
+    
+}
+
+
+.pokebola {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+   animation: pokebola-animation 1.5s infinite linear;
+}
+
+
+
+.pikachu {
+    position: absolute;
+    bottom: 0px;
+    width: 200px;
+}
+
+
+
+.jump {
+    animation: jump-animation 500ms ease-out ;
+}
+
+
+
+.cloud {
+    position: absolute;
+    width: 1250px;
+    animation: cloud-animation 15s infinite linear;
+}
+
+
+header {
+    background-color: #87ceeb;
+    font-size: 25px;
+    padding: 10px;
+}
+
+
+
+
+.end-game {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.GameOver {
+    position: relative;
+    font-size: 130px;
+}
+
+.back-button {
+    position: relative;
+    background-color: #8B0000;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+    width: 300px;
+    padding: 30px;
+}
+
+.TryAgain-button {
+    position: relative;
+    background-color: #8B0000;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+    width: 400px;
+    padding: 10px;
+}
+
+.Board-EndGame{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+@keyframes pokebola-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+@keyframes jump-animation {
+    0% {
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+
+@keyframes cloud-animation {
+    from {
+       right: -1250px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+

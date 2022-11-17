@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Press+Start+2P&display=swap');
+
+
+* {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.login-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.pikachu-icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+img {
+    width: 300px;
+}
+
+h1 {
+    color: rgb(250, 250, 41);
+    font-size: 50px;
+    padding: 15px;
+}
+
+
+.login-input {
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+}
+
+
+.login-button {
+    background-color: #8B0000;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    max-width: 300px;
+    width: 100%;
+    padding: 15px;
+}
+
+
+.login-button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}
+
+
+.texto {
+    text-align: center;
+    font-size: 100px;
+    cursor: default;
+    position: relative;
+}
+
+
+.texto::before {
+    content: "";
+    background-color: #8B0000;
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transition: transform 300ms ease;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.texto:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+    
+
+.board {
+    width: 100%;
+    height: 50%;
+    border-bottom: solid 15px rgb(35, 155, 26);
+    margin: 0 auto;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e8f6ff)
+}
+
+body {
+    background-color: #87ceeb;
+}
+
+
+.pokebola {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    animation: pokebola-animation 2s infinite linear;
+}
+
+
+.pikachu {
+    position: absolute;
+    bottom: 0px;
+    width: 200px;
+    animation: jump-animation 2s  infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-delay: 1s;
+} 
+
+
+.cloud {
+    position: absolute;
+    width: 500px;
+    animation: cloud-animation 10s infinite linear;
+}
+
+
+p {
+    font-size: 25px;
+    padding: 30px;
+}
+
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+
+@keyframes pokebola-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+
+@keyframes jump-animation {
+    0% {
+        bottom: 0;
+    }
+
+  
+    50% {
+        bottom: 150px;
+    }
+
+   
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes cloud-animation {
+    from {
+       right: -500px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
