@@ -7,7 +7,7 @@
 A página possui 5 seções:
 
 - **PÁGINA DE LOGIN:** login do usúario com um campo de input;
-- **SOBRE O JOGO:** Uma breve explicação do game;
+- **COMO JOGAR:** Uma breve explicação do game;
 - **PÁGINA DO GAME:** Game rodando :);
 ---
 
